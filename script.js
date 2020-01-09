@@ -33,10 +33,10 @@ $(document).ready(function() {
     if (storedPlans !== null) {
       planTextArr = storedPlans;
     } else {
-      // this should only occur on first time the app is loaded in the browser
-      // helpfully remind user that lunch is important
+      
+      //lunch time
       planTextArr = new Array(9);
-      planTextArr[4] = "Lunch nomnom";
+      planTextArr[3] = "Nomnom time";
     }
   
     if (test) { console.log("full array of plned text",planTextArr); }
@@ -143,13 +143,13 @@ $(document).ready(function() {
         if (test) { console.log("greaterthan"); }
         $hourRow.css("background-color","lightgreen")
       } else {
-        if (test) { console.log("eqaul"); }
+        if (test) { console.log("equal"); }
         $hourRow.css("background-color","tomato")
       }
     };
   
     // saves to local storage
-    // conclick function to listen for user clicks on plan area
+    // onclick function to listen for user clicks on plan area
     $(document).on('click','i', function(event) {
       event.preventDefault();  
   
@@ -187,38 +187,5 @@ $(document).ready(function() {
     });
   });
 
-/////////////////////
-var a = moment('2016-01-01'); 
-var b = a.add(1, 'week'); 
-a.format();
-"2016-01-08T00:00:00-06:00"
-/////////////////
 
-<script type="text/javascript">
-$(".txtb").on("keyup", function (e) {
-    if (e.keyCode == 13 && $(".txtb").val() != "") {
-        var task = $("<div class='task'></div>").text($(".txtb").val());
-        var del = $("<i class='fas fa-trash-alt'></i>");
 
-        var check = $("<i class='fas fa-check'></i>").click(function () {
-            var p = $(this).parent();
-            p.fadeOut(function () {
-                p.remove();
-            });
-        });
-
-        var check = $("<i class='fas fa-check'></i>").click(function () {
-            var p = $(this).parent();
-            p.fadeOut(function () {
-                $(".comp").append(p);
-                p.fadeIn();
-            });
-            $(this).remove();
-        });
-
-        task.append(del, check);
-        $(".notcomp").append(task);
-        $(".txtb").val("");
-    }
-});
-</script>
