@@ -18,13 +18,8 @@ $(document).ready(function() {
   
     let $dateHeading = $('#navbar-subtitle');
     $dateHeading.text(now);
-    
-    // using font awesome icon https://fontawesome.com/license
-    // change description here - none
-    const saveIcon = "./images/save-regular.svg"; 
   
     // Get stored todos from localStorage
-    // Parsing the JSON string to an object
     let storedPlans = JSON.parse(localStorage.getItem("storedPlans"));
   
     if (test) { console.log(storedPlans); }
@@ -41,7 +36,7 @@ $(document).ready(function() {
   
     if (test) { console.log("full array of plned text",planTextArr); }
   
-    // set variable referencing planner element
+    // set variable for planner element
     let $plannerDiv = $('#plannerContainer');
     // clear existing elements
     $plannerDiv.empty();
@@ -113,10 +108,11 @@ $(document).ready(function() {
       let $col1SaveDiv = $('<div>');
       $col1SaveDiv.addClass('col-md-1');
   
-      let $saveBtn = $('<i>');
+      let $saveBtn = $('<button>');
+      $saveBtn.append($('<i>'));
       $saveBtn.attr('id',`saveid-${index}`);
       $saveBtn.attr('save-id',index);
-      $saveBtn.attr('class',"far fa-save saveIcon");
+      $saveBtn.attr('class',"fas fa-save saveIcon");
       
       // add col width and row component to row
       $rowDiv.append($col1SaveDiv);
@@ -136,7 +132,7 @@ $(document).ready(function() {
       if (test) { console.log("rowColor ",nowHour24, hour); }
   
       if ( hour < nowHour24) {
-        // $hourRow.css('')
+        // $hourRow.css
         if (test) { console.log("lessThan"); }
         $hourRow.css("background-color","lightgrey")
       } else if ( hour > nowHour24) {
@@ -144,13 +140,13 @@ $(document).ready(function() {
         $hourRow.css("background-color","lightgreen")
       } else {
         if (test) { console.log("equal"); }
-        $hourRow.css("background-color","tomato")
+        $hourRow.css("background-color","red")
       }
     };
   
     // saves to local storage
     // onclick function to listen for user clicks on plan area
-    $(document).on('click','i', function(event) {
+    $(document).on('click','.saveIcon', function(event) {
       event.preventDefault();  
   
       if (test) { console.log('click pta before '+ planTextArr); }

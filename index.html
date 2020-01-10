@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,119 +18,22 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-dark bg-dark" style = "contain: content; height: 120px;">
+    <nav class="navbar fixed-top navbar-dark bg-dark" style="contain: content; height: 120px;">
         <div class="header-text">
             <h1 id="navbar-title">Work Day Planner</h1>
             <h2 id="navbar-subtitle">January 7th 2020</h2>
+            <div class="col-md-1">
+                <i class="fas fa-save"></i>
+                
+            </div>
         </div>
     </nav>
 
 
-    
+
 
     <form id="formplanner">
-        <div class="container" id="plannerContainer">
-            <div class="row plannerRow" hour-index="9" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">9 am</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-0" hour-index="0" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i class="fas fa-save"></i>
-                    
-                </div>
-            </div>
-            <div class="row plannerRow" hour-index="10" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">10 am</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-1" hour-index="1" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i id="saveid-1" save-id="1" class="fas fa-save saveIcon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="row plannerRow" hour-index="11" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">11 am</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-2" hour-index="2" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i id="saveid-2" save-id="2" class="fas fa-save saveIcon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="row plannerRow" hour-index="12" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">12 pm</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-3" hour-index="3" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i id="saveid-3" save-id="3" class="fas fa-save saveIcon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="row plannerRow" hour-index="13" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">1 pm</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-4" hour-index="4" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i id="saveid-4" save-id="4" class="fas fa-save saveIcon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="row plannerRow" hour-index="14" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">2 pm</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-5" hour-index="5" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i id="saveid-5" save-id="5" class="fas fa-save saveIcon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="row plannerRow" hour-index="15" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">3 pm</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-6" hour-index="6" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i id="saveid-6" save-id="6" class="far fa-save saveIcon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="row plannerRow" hour-index="16" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">4 pm</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-7" hour-index="7" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i id="saveid-7" save-id="7" class="fas fa-save saveIcon" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="row plannerRow" hour-index="17" style="background-color: lightgreen;">
-                <div class="col-md-2">
-                    <span class="timeBox">5 pm</span>
-                </div>
-                <div class="col-md-9">
-                    <input id="input-8" hour-index="8" type="text" class="dailyPlan">
-                </div>
-                <div class="col-md-1">
-                    <i id="saveid-8" save-id="8" class="fas fa-save saveIcon" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
+        <div class="container" id="plannerContainer"></div>
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"

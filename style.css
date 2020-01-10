@@ -18,10 +18,20 @@
     top: 0;
 }
 
+#formplanner{
+    border-radius: 8px;
+    box-shadow: orangered 0 0 10px 10px;
+    height: 100%;
+}
+
 #plannerContainer {
     border-radius: 8px;
     border-spacing: 8px;
     box-shadow: rgb(50, 47, 65) 0 0 10px 20px;
+}
+
+.plannerRow{
+    height: 50px;
 }
 
 body{
